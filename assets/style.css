@@ -1,4 +1,74 @@
+body {
+    margin: 0px;
+}
 
-body{
-	background-color: blue;
+a {
+    text-decoration: none;
+}
+
+.resalta {
+    border-top: solid 15px rgba(255, 0, 0, 0);
+    border-bottom: solid 15px;
+    height: 70px !important
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: #22a;
+    width: 100%;
+    height: 100px;
+    padding: 0px;
+}
+
+.header__logo {
+    margin: 0px 60px;
+    text-align: center;
+}
+
+.header__container--nav {
+    margin-right: 30px;
+    height: 100%
+}
+
+.header__container--nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0px;
+}
+
+.header__container--nav li {
+    font-size: 1.7em;
+    font-family: arial;
+    margin-right: 30px;
+    color: #aa1;
+    height: 100px;
+
+    text-transform: capitalize;
+
+    display: flex;
+    align-items: center;
+}
+
+.header__container--nav li:hover {
+    color: #ee1
+}
+
+
+.work__container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+
+}
+
+.work-card__container {
+    margin: 10px;
+    border: solid 2px;
+    height: 200px;
 }
