@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-
+    border: 0px;
     font-family: arial;
 }
 
@@ -24,6 +24,7 @@ a {
     width: 100%;
     height: 100px;
     padding: 0px;
+    z-index: 2000;
 }
 
 .header__logo {
@@ -66,27 +67,39 @@ a {
 
 .info {
 
-    display: inline-block;
-    background-color: #22a;
-
+    display: flex;
+    align-items: center;
+    background-color: #44b;
     width: 100%;
-    margin: 0px;
+    height: 70vh
 }
 
 .info__container {
-
     display: inline-block;
+    vertical-align: center;
+    margin: auto 0px;
     background-color: #ffa;
-
+    max-height: 60vh
 }
 
 .info__container--text {
-
+    display: inline-block;
     background-color: #fff;
-
     float: right;
     width: 50%;
-    padding: 3vh 5vw;
+    height: 100%;
+
+    padding: 0px 5vw;
+}
+
+.info__title {
+    margin-top: 10px;
+}
+
+.info__context {
+
+    overflow: scroll;
+    max-height: 45vh;
 }
 
 
@@ -98,36 +111,67 @@ a {
 }
 
 .work__container {
-    margin: 1vh 2vw;
+    margin: 5vh 2vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: #fff;
     border: solid 2px #000;
-
-
 }
 
 .work-card__container {
     border: solid 2px;
-    margin: calc(5vh) auto;
-    width: calc(25vw);
-    height: calc(25vh);
+    margin: 5vh auto;
+    width: 25vw;
+    height: calc(25vw/2);
+    background-color: #fff
 }
 
-@media (max-width: 800px) {
+.work-card__container:hover {
+    width: 30vw;
+    height: 15vw;
+    margin: calc(25vw/4 + 10vh/2 - 15vw/2) auto;
+}
+
+.contact__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact__container--form {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.contact__container--contact {
+    margin: 20px;
+}
+
+.footer {
+    width: 100%;
+    height: 2em;
+    margin: 0px;
+    border: 0px;
+    background-color: #aaa;
+}
+
+@media (max-width: 1000px) {
     .header__container--nav li {
         font-size: 1.5em;
     }
 
     .work__container {
         grid-template-columns: repeat(2, 1fr);
-        background-color: #fff;
     }
 
     .work-card__container {
-        margin: calc(5vh)auto;
-        width: calc(40vw);
-        height: calc(40vh);
+        width: 35vw;
+        height: calc(35vw/2);
+    }
+
+    .work-card__container:hover {
+        width: 40vw;
+        height: 20vw;
+        margin: calc(35vw/4 + 10vh/2 - 20vw/2) auto;
     }
 
 
@@ -174,12 +218,16 @@ a {
 
     .work__container {
         grid-template-columns: repeat(1, 1fr);
-        background-color: #fff;
     }
 
     .work-card__container {
-        margin: calc(5vh)auto;
-        width: calc(80vw);
-        height: calc(70vh);
+        width: 80vw;
+        height: 40vw;
+    }
+
+    .work-card__container:hover {
+        width: 90vw;
+        height: 45vw;
+        margin: calc(40vw/2 + 10vh/2 - 45vw/2) auto;
     }
 }
