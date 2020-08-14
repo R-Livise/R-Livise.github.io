@@ -1,7 +1,7 @@
 function redirigir(ev) {
     let section = ev.target.id
 
-    document.getElementById('nav-home').classList.remove("resalta")
+    document.getElementById('nav-info').classList.remove("resalta")
     document.getElementById('nav-work').classList.remove("resalta")
     document.getElementById('nav-contact').classList.remove("resalta")
 
@@ -28,9 +28,9 @@ function prueba(ev) {
     console.log(ev)
 }
 
-document.getElementById('nav-home').addEventListener('click', redirigir)
+document.getElementById('nav-info').addEventListener('click', redirigir)
 document.getElementById('nav-work').addEventListener('click', redirigir)
 document.getElementById('nav-contact').addEventListener('click', redirigir)
-document.getElementById('nav-home').addEventListener('keyup', redirigirFocus)
+document.getElementById('nav-info').addEventListener('keyup', redirigirFocus)
 document.getElementById('nav-work').addEventListener('keyup', redirigirFocus)
 document.getElementById('nav-contact').addEventListener('keyup', redirigirFocus)

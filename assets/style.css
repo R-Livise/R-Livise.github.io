@@ -1,5 +1,7 @@
 body {
     margin: 0px;
+
+    font-family: arial;
 }
 
 a {
@@ -7,6 +9,7 @@ a {
 }
 
 .resalta {
+    color: #ff1 !important;
     border-top: solid 15px rgba(255, 0, 0, 0);
     border-bottom: solid 15px;
     height: 70px !important
@@ -25,7 +28,11 @@ a {
 
 .header__logo {
     margin: 0px 60px;
+    padding: 0px;
     text-align: center;
+
+    font-size: 2em;
+    color: white;
 }
 
 .header__container--nav {
@@ -43,7 +50,6 @@ a {
 
 .header__container--nav li {
     font-size: 1.7em;
-    font-family: arial;
     margin-right: 30px;
     color: #aa1;
     height: 100px;
@@ -58,17 +64,122 @@ a {
     color: #ee1
 }
 
+.info {
+
+    display: inline-block;
+    background-color: #22a;
+
+    width: 100%;
+    margin: 0px;
+}
+
+.info__container {
+
+    display: inline-block;
+    background-color: #ffa;
+
+}
+
+.info__container--text {
+
+    background-color: #fff;
+
+    float: right;
+    width: 50%;
+    padding: 3vh 5vw;
+}
+
+
+.work {
+    display: inline-block;
+    width: 100%;
+    background-color: #dd2;
+    margin: 0px;
+}
 
 .work__container {
-    margin: 20px;
+    margin: 1vh 2vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    background-color: #fff;
+    border: solid 2px #000;
 
 
 }
 
 .work-card__container {
-    margin: 10px;
     border: solid 2px;
-    height: 200px;
+    margin: calc(5vh) auto;
+    width: calc(25vw);
+    height: calc(25vh);
+}
+
+@media (max-width: 800px) {
+    .header__container--nav li {
+        font-size: 1.5em;
+    }
+
+    .work__container {
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #fff;
+    }
+
+    .work-card__container {
+        margin: calc(5vh)auto;
+        width: calc(40vw);
+        height: calc(40vh);
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .resalta {
+        border: 0px rgba(255, 0, 0, 0);
+        color: blue !important;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .resalta::before {
+        content: "→";
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .header__container--nav {
+        overflow: hidden;
+        position: absolute;
+        top: calc(100vh - 100px);
+        right: 0px;
+        margin: 0px;
+
+
+    }
+
+
+    .header__container--nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__container--nav li {
+        font-size: 1.3em;
+    }
+
+    .header__container--nav li:focus {
+        font-size: 1.5em;
+    }
+
+    .work__container {
+        grid-template-columns: repeat(1, 1fr);
+        background-color: #fff;
+    }
+
+    .work-card__container {
+        margin: calc(5vh)auto;
+        width: calc(80vw);
+        height: calc(70vh);
+    }
 }
