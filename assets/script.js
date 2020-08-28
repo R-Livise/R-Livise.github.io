@@ -24,9 +24,19 @@ function redirigirFocus(ev) {
 
 }
 
-function prueba(ev) {
-    console.log(ev)
+function activeMenu(ev) {
+
+    let content = document.getElementById('content-menu').classList
+    if (content.value.indexOf("no-active") > 0) {
+        content.remove("no-active")
+    } else {
+        content.add("no-active")
+    }
+
+
+
 }
+
 
 document.getElementById('nav-info').addEventListener('click', redirigir)
 document.getElementById('nav-work').addEventListener('click', redirigir)
@@ -34,3 +44,6 @@ document.getElementById('nav-contact').addEventListener('click', redirigir)
 document.getElementById('nav-info').addEventListener('keyup', redirigirFocus)
 document.getElementById('nav-work').addEventListener('keyup', redirigirFocus)
 document.getElementById('nav-contact').addEventListener('keyup', redirigirFocus)
+
+
+document.getElementById('menu').addEventListener('click', activeMenu)

@@ -6,20 +6,22 @@
     <title>Porfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Signika:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <!--<script src="https://kit.fontawesome.com/a076d05399.js"></script>-->
     <meta name="viewport" content="width=device-width, inicial_scale=1 ">
 </head>
 
 <body>
     <header class="header">
+        <span class="header__menu" id="menu"><i class="icon-menu"></i></span>
         <figure class="header__logo">
             <p>R-Livise</p>
         </figure>
-        <div class="header__container--nav">
+        <div class="header__container--nav" id="content-menu">
             <ul>
-                <li tabindex="0" id="nav-info"> Home</label></li>
-                <li tabindex="0" id="nav-work">Trabajos</label></li>
-                <li tabindex="0" id="nav-contact">Contacto</label></li>
+                <li tabindex="0" id="nav-info"><span><i class="icon-info"></i></span> Informacion</label></li>
+                <li tabindex="0" id="nav-work"><span><i class="icon-work"></i></span>Trabajos</label></li>
+                <li tabindex="0" id="nav-contact"><span><i class="icon-contact"></i></span>Contacto</label></li>
             </ul>
         </div>
     </header>
@@ -67,7 +69,7 @@
                 </div>
             </div>
             <div class="work-card__container">
-                <img src="./assets/imagen/project01.png" alt="">
+                <img src="./assets/images/project01.png" alt="">
                 <div class="work-card__detail">
                     <h3 class="work-card__title">Clon de Google</h3>
                     <p class="work-card__description"></p>
@@ -113,14 +115,12 @@
             <div class="contact__container--form">
                 <label for="name">Nombre</label>
                 <input type="text" id="name">
-                <label for="email">Email</label>
-                <input type="text" id="email">
-                <label for="mesaje">Mensaje</label>
-                <textarea name="mesaje" id="mesaje" cols="30" rows="10"></textarea>
+                <button type="sumbit">Enviar</button>
             </div>
             <div class="contact__container--contact">
-                <h2>Contactos</h2>
-                <p>Email: r.livise@hotmail.com</p>
+                <a href="" class="social-link "><span><i class="icon-face"></i></span></a>
+                <a href="" class="social-link "><span><i class="icon-twitter"></i></span></a>
+                <a href="https://github.com/R-Livise" class="social-link"><span><i class="icon-github"></i></span></a>
             </div>
         </div>
     </section>

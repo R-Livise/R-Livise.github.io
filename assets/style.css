@@ -1,3 +1,76 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?xa7b56');
+    src: url('fonts/icomoon.eot?xa7b56#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?xa7b56') format('truetype'),
+        url('fonts/icomoon.woff?xa7b56') format('woff'),
+        url('fonts/icomoon.svg?xa7b56#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+    content: "\e9bd";
+}
+
+.icon-home:before {
+    content: "\e900";
+}
+
+.icon-contact:before {
+    content: "\e944";
+}
+
+.icon-email:before {
+    content: "\e945";
+}
+
+.icon-work:before {
+    content: "\e9ae";
+}
+
+.icon-internet:before {
+    content: "\e9c9";
+}
+
+.icon-info:before {
+    content: "\ea0c";
+}
+
+.icon-face:before {
+    content: "\ea91";
+}
+
+.icon-twitter:before {
+    content: "\ea96";
+}
+
+.icon-github:before {
+    content: "\eab0";
+}
+
+
+
+
+
+
 body {
     margin: 0px;
     border: 0px;
@@ -12,7 +85,6 @@ a {
     color: #ff1 !important;
     border-top: solid 15px rgba(255, 0, 0, 0);
     border-bottom: solid 15px;
-    height: 70px !important
 }
 
 .header {
@@ -25,6 +97,10 @@ a {
     background-color: #22a;
     height: 100px;
     z-index: 2000;
+}
+
+.header__menu {
+    display: none;
 }
 
 .header__logo {
@@ -63,16 +139,19 @@ a {
     font-size: 1.5em;
     margin-right: 30px;
     color: #aa1;
-    height: 100px;
     font-weight: bold;
     text-transform: capitalize;
-
+    height: calc(100% - 30px);
     display: flex;
     align-items: center;
 }
 
 .header__container--nav li:hover {
     color: #ee1
+}
+
+.header__container--nav span {
+    display: none;
 }
 
 .info {
@@ -206,8 +285,11 @@ a {
 .contact__container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     padding: 10vh 0px;
+    background: blue;
+
 }
 
 .contact__container--form {
@@ -217,18 +299,15 @@ a {
     flex-direction: column;
 }
 
-.contact__container--contact {
-    background-color: #22b;
-    margin: 20px;
-    width: 50%;
-    min-width: 310px;
-    border-radius: 10px;
-    color: #fff;
+.contact__container--contact {}
+
+
+.social-link i {
+    display: inline-block;
+    font-size: 4em;
+    color: white;
 }
 
-.contact__container--contact>* {
-    margin: 3vh 3vw;
-}
 
 .footer {
     flex: 1;
@@ -305,14 +384,39 @@ a {
 }
 
 @media screen and (max-width: 480px) {
+
+    /*js*/
     .resalta {
         border: 0px rgba(255, 0, 0, 0);
         color: blue !important;
         background-color: rgba(255, 255, 255, 0.6);
+        height: 2em;
     }
 
-    .resalta::before {
-        content: "→";
+    .header__menu {
+        display: block;
+        text-align: center;
+        line-height: 5em;
+        position: fixed;
+        z-index: 2;
+        bottom: 2em;
+        right: 1em;
+        height: 4em;
+        width: 4em;
+        background: black;
+        border-radius: 2em;
+    }
+
+
+    .header__menu i {
+        display: inline-block;
+        color: white;
+        font-size: 2em;
+
+    }
+
+    .header__menu.is-active i {
+        display: none;
     }
 
     .header {
@@ -320,27 +424,51 @@ a {
     }
 
     .header__container--nav {
+        height: 8em;
+        width: 150px;
         overflow: hidden;
-        position: absolute;
-        top: calc(100vh - 100px);
-        right: 0px;
+        position: fixed;
+        bottom: 4em;
+        right: 2em;
         margin: 0px;
 
-
+        background-color: black;
+        transition-property: height width bottom;
+        transition-duration: 0.5s;
     }
 
+    .header__container--nav.no-active {
+        display: block;
+        overflow: hidden;
+        bottom: 3em;
+        height: 2em;
+        width: 2em;
+        margin: 0px;
+    }
 
     .header__container--nav ul {
         display: flex;
         flex-direction: column;
+
     }
 
     .header__container--nav li {
         font-size: 1.3em;
+        margin-right: 0px;
+        height: 2em;
+        transition: 0.3s;
     }
 
     .header__container--nav li:focus {
         font-size: 1.5em;
+        height: 2em;
+    }
+
+
+
+    .resalta span {
+        display: inline-block;
+        margin-right: 0.25em;
     }
 
     .info__container--text {
