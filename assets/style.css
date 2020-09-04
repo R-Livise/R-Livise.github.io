@@ -1,3 +1,15 @@
+:root {
+    --color-menu: #293462;
+    --color-principal-1: #216583;
+    --color-principal-2: #00818a;
+    --color-secundario-1: #f7be16;
+    --color-secundario-2: #f7de30;
+    --color-secundario-3: #ff9;
+    --color-font-light: #f2f2f2;
+    --color-font-dark: #333;
+
+}
+
 @font-face {
     font-family: 'icomoon';
     src: url('fonts/icomoon.eot?xa7b56');
@@ -82,7 +94,6 @@ a {
 }
 
 .resalta {
-    color: #ff1 !important;
     border-top: solid 15px rgba(255, 0, 0, 0);
     border-bottom: solid 15px;
 }
@@ -94,7 +105,7 @@ a {
     justify-content: space-between;
     position: sticky;
     top: 0px;
-    background-color: #22a;
+    background-color: var(--color-menu);
     height: 100px;
     z-index: 2000;
 }
@@ -110,7 +121,7 @@ a {
     padding: 0px;
     text-align: center;
     font-size: 2em;
-    color: white;
+    color: var(--color-font-light);
     display: flex;
     align-items: center;
 }
@@ -137,8 +148,9 @@ a {
 
 .header__container--nav li {
     font-size: 1.5em;
-    margin-right: 30px;
-    color: #aa1;
+    padding: 0px 5px;
+    margin-right: 20px;
+    color: var(--color-secundario-1);
     font-weight: bold;
     text-transform: capitalize;
     height: calc(100% - 30px);
@@ -147,7 +159,7 @@ a {
 }
 
 .header__container--nav li:hover {
-    color: #ee1
+    color: var(--color-secundario-3);
 }
 
 .header__container--nav span {
@@ -155,7 +167,7 @@ a {
 }
 
 .info {
-    background-color: #44b;
+    background-color: var(--color-principal-1);
     flex: 1;
     height: 80vh;
     display: flex;
@@ -163,7 +175,7 @@ a {
 }
 
 .info__container {
-    background-color: #ffa;
+    background-color: var(--color-secundario-3);
     width: 100vw;
     display: flex;
     justify-content: flex-end;
@@ -172,8 +184,9 @@ a {
 .info__container--text {
 
     font-size: 20px;
-    color: #333;
-    background-color: #fff;
+    color: var(--color-font-dark);
+    background-color: var(--color-font-light);
+    ;
     display: flex;
     flex-direction: column;
     width: 50vw;
@@ -202,7 +215,7 @@ a {
 .work {
     display: inline-block;
     width: 100%;
-    background-color: #dd2;
+    background-color: var(--color-secundario-1);
     margin: 0px;
     padding: 10px 0px;
 }
@@ -239,7 +252,7 @@ a {
 .work-card__detail {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9)0%, rgba(0, 0, 0, 0)100%);
     font-size: 16px;
-    color: #fff;
+    color: var(--color-font-light);
     transition: 450ms;
     padding: 10px 10px;
     position: absolute;
@@ -271,7 +284,7 @@ a {
 
 .work-card__buton a {
 
-    background-color: #ff0;
+    background-color: var(--color-font-light);
 }
 
 
@@ -282,13 +295,16 @@ a {
     width: 24px;
 }
 
+.contact {
+    background-color: var(--color-principal-2);
+}
+
 .contact__container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     padding: 10vh 0px;
-    background: blue;
 
 }
 
@@ -305,14 +321,15 @@ a {
 .social-link i {
     display: inline-block;
     font-size: 4em;
-    color: white;
+    color: var(--color-font-light);
 }
 
 
 .footer {
     flex: 1;
     height: 2em;
-    background-color: #aaa;
+    background-color: var(--color-menu);
+    color: var(--color-font-light);
     display: flex;
     align-items: center;
 }
@@ -356,7 +373,7 @@ a {
     }
 
     .header__container--nav li {
-        margin-right: 20px;
+        margin-right: 10px;
         font-size: 1.5em;
     }
 
@@ -383,13 +400,18 @@ a {
     }
 }
 
+@media screen and (max-height: 500px) {
+    .header {
+        height: 70px;
+    }
+}
+
 @media screen and (max-width: 480px) {
+
 
     /*js*/
     .resalta {
         border: 0px rgba(255, 0, 0, 0);
-        color: blue !important;
-        background-color: rgba(255, 255, 255, 0.6);
         height: 2em;
     }
 
@@ -403,14 +425,14 @@ a {
         right: 1em;
         height: 4em;
         width: 4em;
-        background: black;
+        background: var(--color-menu);
         border-radius: 2em;
     }
 
 
     .header__menu i {
         display: inline-block;
-        color: white;
+        color: var(--color-font-light);
         font-size: 2em;
 
     }
@@ -429,11 +451,11 @@ a {
         overflow: hidden;
         position: fixed;
         bottom: 4em;
-        right: 2em;
+        right: 3.5em;
         margin: 0px;
 
-        background-color: black;
-        transition-property: height width bottom;
+        background-color: var(--color-menu);
+        transition-property: height var(--color-font-light) bottom;
         transition-duration: 0.5s;
     }
 
@@ -441,8 +463,8 @@ a {
         display: block;
         overflow: hidden;
         bottom: 3em;
-        height: 2em;
-        width: 2em;
+        height: 1em;
+        width: 1em;
         margin: 0px;
     }
 
