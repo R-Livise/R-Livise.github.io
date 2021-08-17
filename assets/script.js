@@ -1,38 +1,42 @@
+const buttons = [];
+buttons.push(document.querySelector('#nav-info'));
+buttons.push(document.querySelector('#nav-work'));
+buttons.push(document.querySelector('#nav-contact'));
+
+const templates = [];
+
+templates.push(document.querySelector('#info'));
+templates.push(document.querySelector('#work'));
+templates.push(document.querySelector('#contact'));
+
+document
+  .querySelector('navbar-option')
+  .addEventListener('click', redirigir);
+document
+  .querySelector('navbar-option')
+  .addEventListener('keyup', redirigirFocus);
+
 function redirigir(ev) {
-    let section = ev.target.id
+  if (ev.target.nodeName !== 'LI') {
+    return false;
+  }
+  const headerNav = document.querySelector(
+    '#' + ev.target.id.split('-')[1]
+  );
+  console.log(headerNav);
+  //   const element = document.querySelector('#header');
+  //   const elementStyle = window.getComputedStyle(element);
+  //   const elementPosition = elementStyle
+  //     .getPropertyValue('height')
+  //     .split('p')[0];
 
-    document.getElementById('nav-info').classList.remove("resalta")
-    document.getElementById('nav-work').classList.remove("resalta")
-    document.getElementById('nav-contact').classList.remove("resalta")
-
-    ev.target.classList.add("resalta")
-
-    let div = document.getElementById(section.split("-")[1])
-
-    let element = document.getElementById('header');
-    let elementStyle = window.getComputedStyle(element);
-    let elementColor = elementStyle.getPropertyValue('height').split('p')[0];
-
-    if (div != null) {
-        document.scrollingElement.scrollTop = div.offsetTop - elementColor;
-    }
+  if (headerNav != null) {
+    document.scrollingElement.scrollTop = headerNav.offsetTop - 100;
+  }
 }
 
 function redirigirFocus(ev) {
-    if (ev.key == "Enter") {
-        redirigir(ev);
-    }
+  if (ev.key == 'Enter') {
+    redirigir(ev);
+  }
 }
-
-function activeMenu(ev) {
-    document.getElementById('content-menu').classList.toggle("no-active")
-}
-
-document.getElementById('nav-info').addEventListener('click', redirigir)
-document.getElementById('nav-work').addEventListener('click', redirigir)
-document.getElementById('nav-contact').addEventListener('click', redirigir)
-document.getElementById('nav-info').addEventListener('keyup', redirigirFocus)
-document.getElementById('nav-work').addEventListener('keyup', redirigirFocus)
-document.getElementById('nav-contact').addEventListener('keyup', redirigirFocus)
-
-document.getElementById('menu').addEventListener('click', activeMenu)

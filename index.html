@@ -6,25 +6,21 @@
     <title>Porfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Signika:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
-    <link rel="icon" type="image/png" href="images/favicon.png" />
     <!--<script src="https://kit.fontawesome.com/a076d05399.js"></script>-->
-    <meta name="viewport" content="width=device-width, inicial_scale=1 ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <header class="header" id="header">
-        <span class="header__menu" id="menu"><i class="icon-menu"></i></span>
-        <figure class="header__logo">
+    <navbar-option items-option="3" size-change="850px">
+        <spam slot="logo"><i class="icon-menu"></i></spam>
+        <spam slot="title">
             <p>R-Livise</p>
-        </figure>
-        <div class="header__container--nav" id="content-menu">
-            <ul>
-                <li tabindex="0" id="nav-info"><span><i class="icon-info"></i></span> Informacion</label></li>
-                <li tabindex="0" id="nav-work"><span><i class="icon-work"></i></span>Trabajos</label></li>
-                <li tabindex="0" id="nav-contact"><span><i class="icon-contact"></i></span>Contacto</label></li>
-            </ul>
-        </div>
-    </header>
+        </spam>
+        <li tabindex="0" slot="option-1" id="nav-info"><span><i class="icon-info"></i></span> Informacion</li>
+        <li tabindex="0" slot="option-2" id="nav-work"><span><i class="icon-work"></i></span>Trabajos</li>
+        <li tabindex="0" slot="option-3" id="nav-contact"><span><i class="icon-contact"></i></span>Contacto</li>
+
+    </navbar-option>
     <section class="info" id="info">
         <div class="info__container">
             <div class="info__container--text">
@@ -37,75 +33,36 @@
     <section class="work" id="work">
         <div class="work__container">
             <div class="work-card__container">
-                <img src="./assets/imagen/project01.png" alt="">
+                <img src="./assets/images/project01.png" alt="">
                 <div class="work-card__detail">
                     <h3 class="work-card__title">Clon de Google</h3>
-                    <p class="work-card__description">asdasdads</p>
-                    <div class="work-card__buton"><a href="https://github.com/R-Livise/googleClon"><img src="https://img.icons8.com/ios-filled/50/000000/github-2.png" /></a></div>
-                </div>
-            </div>
-            <div class="work-card__container">
-                <img src="./assets/imagen/project01.png" alt="">
-                <div class="work-card__detail">
-                    <h3 class="work-card__title">Clon de Google</h3>
-                    <p class="work-card__description"></p>
-                    <div class="work-card__buton"><a href="https://github.com/R-Livise/googleClon"><img src="https://img.icons8.com/ios-filled/50/000000/github-2.png" /></a></div>
-                </div>
-            </div>
-            <div class="work-card__container">
-                <img src="./assets/imagen/project01.png" alt="">
-                <div class="work-card__detail">
-                    <h3 class="work-card__title">Clon de Google</h3>
-                    <p class="work-card__description"></p>
-                    <div class="work-card__buton"><a href="https://github.com/R-Livise/googleClon"><img src="https://img.icons8.com/ios-filled/50/000000/github-2.png" /></a></div>
-                </div>
-            </div>
-            <div class="work-card__container">
-                <img src="./assets/imagen/project01.png" alt="">
-                <div class="work-card__detail">
-                    <h3 class="work-card__title">Clon de Google</h3>
-                    <p class="work-card__description"></p>
-                    <div class="work-card__buton"><a href="https://github.com/R-Livise/googleClon"><img src="https://img.icons8.com/ios-filled/50/000000/github-2.png" /></a></div>
+                    <p class="work-card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui provident debitis laboriosam assumenda ipsa dolorum commodi, deleniti velit nisi hic, exercitationem ex officiis laudantium nobis aperiam itaque, voluptatum reiciendis explicabo!</p>
+                    <div class="work-card__buttons">
+                        <div><a href="https://github.com/R-Livise/googleClon"><span><i class="icon-github"></i></span></a></div>
+                        <div><a href="https://r-livise.github.io/googleClon/"><span><i class="icon-internet"></i></span></a></div>
+                    </div>
                 </div>
             </div>
             <div class="work-card__container">
                 <img src="./assets/images/project01.png" alt="">
                 <div class="work-card__detail">
                     <h3 class="work-card__title">Clon de Google</h3>
-                    <p class="work-card__description"></p>
-                    <div class="work-card__buton"><a href="https://github.com/R-Livise/googleClon"><img src="https://img.icons8.com/ios-filled/50/000000/github-2.png" /></a></div>
+                    <p class="work-card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui provident debitis laboriosam assumenda ipsa dolorum commodi, deleniti velit nisi hic, exercitationem ex officiis laudantium nobis aperiam itaque, voluptatum reiciendis explicabo!</p>
+                    <div class="work-card__buttons">
+                        <div><a href="https://github.com/R-Livise/googleClon"><span><i class="icon-github"></i></span></a></div>
+                        <div><a href="https://github.com/R-Livise/googleClon"><span><i class="icon-internet"></i></span></a></div>
+                    </div>
                 </div>
             </div>
             <div class="work-card__container">
-                <img src="./assets/imagen/project01.png" alt="">
+                <img src="./assets/images/project01.png" alt="">
                 <div class="work-card__detail">
                     <h3 class="work-card__title">Clon de Google</h3>
-                    <p class="work-card__description"></p>
-                    <div class="work-card__buton"><a href="https://github.com/R-Livise/googleClon"><img src="https://img.icons8.com/ios-filled/50/000000/github-2.png" /></a></div>
-                </div>
-            </div>
-            <div class="work-card__container">
-                <img src="./assets/imagen/project01.png" alt="">
-                <div class="work-card__detail">
-                    <h3 class="work-card__title">Clon de Google</h3>
-                    <p class="work-card__description"></p>
-                    <div class="work-card__buton"><a href="https://github.com/R-Livise/googleClon"><img src="https://img.icons8.com/ios-filled/50/000000/github-2.png" /></a></div>
-                </div>
-            </div>
-            <div class="work-card__container">
-                <img src="./assets/imagen/project01.png" alt="">
-                <div class="work-card__detail">
-                    <h3 class="work-card__title">Clon de Google</h3>
-                    <p class="work-card__description"></p>
-                    <div class="work-card__buton"><a href="https://github.com/R-Livise/googleClon"><img src="https://img.icons8.com/ios-filled/50/000000/github-2.png" /></a></div>
-                </div>
-            </div>
-            <div class="work-card__container">
-                <img src="./assets/imagen/project01.png" alt="">
-                <div class="work-card__detail">
-                    <h3 class="work-card__title">Clon de Google</h3>
-                    <p class="work-card__description"></p>
-                    <div class="work-card__buton"><a href="https://github.com/R-Livise/googleClon"><img src="https://img.icons8.com/ios-filled/50/000000/github-2.png" /></a></div>
+                    <p class="work-card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui provident debitis laboriosam assumenda ipsa dolorum commodi, deleniti velit nisi hic, exercitationem ex officiis laudantium nobis aperiam itaque, voluptatum reiciendis explicabo!</p>
+                    <div class="work-card__buttons">
+                        <div><a href="https://github.com/R-Livise/Amedida"><span><i class="icon-github"></i></span></a></div>
+                        <div><a href="https://github.com/R-Livise/googleClon"><span><i class="icon-internet"></i></span></a></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,8 +70,8 @@
     <section class="contact" id="contact">
         <div class="contact__container">
             <div class="contact__container--form">
-                <label for="name">Nombre</label>
-                <input type="text" id="name">
+                <label for="email">Enviame tu correo para contactarnos.</label>
+                <input type="text" id="email">
                 <button type="sumbit">Enviar</button>
             </div>
             <div class="contact__container--contact">
@@ -129,6 +86,8 @@
             <p>Rafael Livise Larico @ 2020</p>
         </div>
     </footer>
+    <script type="text/javascript" src="./assets/navbar-option.js"></script>
+
     <script type="text/javascript" src="./assets/script.js"></script>
 </body>
 
