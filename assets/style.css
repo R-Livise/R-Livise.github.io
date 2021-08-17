@@ -163,6 +163,7 @@ navbar-option {
   width: 25vw;
   height: calc(25vw / 2);
   background-color: #fff;
+  overflow: hidden;
   cursor: pointer;
   transition: 400ms;
   transform-origin: center left;
@@ -210,7 +211,7 @@ navbar-option {
 
 .work-card__description {
   margin-top: 2px;
-  margin-bottom: 2px;
+  margin-bottom: 10px;
 }
 
 .work-card__buttons {
@@ -253,6 +254,16 @@ navbar-option {
 .contact__container--form input {
   width: 90%;
   min-width: 100px;
+}
+.contact__button{
+  margin:10px auto;
+  padding: 5px 10%;
+  font-size: 16px;
+  background-color: var(--color-menu);
+  color: #f2f2f2;
+  font-weight: 400;
+  border-color: transparent;
+  border-radius: 5px;
 }
 
 .social-link i {
